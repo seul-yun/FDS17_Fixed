@@ -33,20 +33,21 @@ a {
 }
 /* 레이아웃 */
 .container{
-    /* background-color: #ccc; */
+    /* background-color: #ccc;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    align-items: center; */
 }
 .header, .visual, .main, .slogan, .footer{
     width: 940px;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 /* 헤더 */
 .header{
     background-color: #fff;
     border-radius: 0 0 15px 15px;
-    padding: 0 30px 0 30px;
+    padding: 1px 30px;
     position: relative;
 }
 /* 로고 */
@@ -227,24 +228,25 @@ a {
 }
 /* 메인 콘텐츠 */
 .main{
-    background-color: blue;
+    background-color: #fff;
     min-height: 450px;
     padding: 30px;
     display: flex;
     flex-flow: row nowrap ;
     justify-content: space-between;
     align-items: flex-start;
+    border-radius: 15px 15px 0 0;
 }
 .group1{
     /* background-color: pink; */
     width: 250px;
 }
 .group2{
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     width: 380px;
 }
 .group3{
-    background-color: coral;
+    /* background-color: coral; */
     width: 190px;
 }
 .clearfix::after{
@@ -323,7 +325,7 @@ a {
 }
 .member-only a{
     padding-top: 5px ;
-    padding-left: 5px;
+    padding-bottom: 5px;
 }
 .member-only li:first-child{
     float: left;
@@ -331,17 +333,17 @@ a {
 .member-only li:last-child{
     float: right;
 }
-.member-only li::before{
+.member-only a::before{
     content: '\e803';
     font-family: 'fontello';
-    color: blue;
-    font-size: .2em;
+    color: #e65400;
     display: inline-block;
+    margin-right: .2em;
 }
 /* 유효성 검사 배너 링크 */
 .validation-list{
     margin-top: 25px;
-    background-color: yellow;
+    /* background-color: yellow; */
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
@@ -361,6 +363,56 @@ a {
 .validation-list a:hover{
     color: #f00;
 }
+/* 웹 관련 용어 */
+.term {
+    border: 1px solid #aaa;
+    background: #ccc linear-gradient(180deg,#ccc,#eee);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 15px;
+
+}
+.term-heading {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.term-list {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.term-list > div {
+    margin-top: 10px;
+}
+.term-list > div::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.term-list-subject{
+    color: #296897;
+}
+.odd .term-list-subject, .odd .term-list-brief {
+    float: right;
+    width: 145px;
+}
+.odd .term-list-thumbnail{
+    float: left;
+    margin-left: 0;
+}
+.term-list-brief {
+    margin-left: 0;
+    margin-top:5px;
+}
+.even .term-list-subject, .even .term-list-brief {
+    float: left;
+    width: 145px;
+}
+.even .term-list-thumbnail{
+    float: right;
+    margin-left: 0;
+}
+
 /* 슬로건 */
 .slogan{
     background-color: orange;

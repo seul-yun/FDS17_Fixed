@@ -256,7 +256,7 @@ a {
 }
 /* 로그인 */
 .login {
-    background-color: orangered;
+    background: #f79f33 linear-gradient(to bottom, #f79f33,#ff6e00); 
     border-radius: 5px;
     padding: 10px;
     box-shadow: 5px 5px 0 0 grey;
@@ -296,7 +296,7 @@ a {
     width: 90px;
     padding-left: 3px;
     height: 24px;
-    padding: 1px 1px 1px 0.5px;
+    padding: 1px 1px 1px 5px;
 }
 .btn-login {
     position: absolute;
@@ -400,9 +400,10 @@ a {
     float: left;
     margin-left: 0;
 }
-.term-list-brief {
+.odd .term-list-brief {
     margin-left: 0;
     margin-top:5px;
+    /* line-height: 1.5rem; */
 }
 .even .term-list-subject, .even .term-list-brief {
     float: left;
@@ -412,7 +413,61 @@ a {
     float: right;
     margin-left: 0;
 }
-
+.even .term-list-brief {
+    margin-left: 0;
+    margin-top:5px;
+    /* line-height: 1.5rem; */
+}
+/* 검색 폼 */
+.search-form {
+    background: #ccc linear-gradient(180deg,#ccc,#eee);/*180deg가 기본값*/
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 10px;
+    border: 1px solid #aaa;
+    border-bottom-color: #fff;
+}
+.search-form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    
+}
+.search-form div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-form label,
+.btn-search {
+    white-space: nowrap;
+}
+.search-form label::before{
+    content: '\e802';
+    font-family: 'fontello';
+    display: inline-block;
+    margin-right: .2em;
+    /* margin: 5px; */
+}
+.search-form input [type="search"] {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 5px;
+    height: 24px;
+    /* flex-grow: 1; */
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 200px;
+}
+.btn-search{
+   background-color: #222;
+   color: #fff;
+   border: 1px solid #aaa;
+   border-radius: 3px;
+   font-style: 1.3rem;
+   height: 24px;
+   padding: 0 10px;
+}
 /* 슬로건 */
 .slogan{
     background-color: orange;

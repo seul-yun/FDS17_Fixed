@@ -132,6 +132,10 @@ a {
     padding-left: 0;
     list-style: none;
     white-space: nowrap;
+    display: none;
+}
+.menu-act .sub-menu {
+    display: block;
 }
 .sub-menu li, .sub-menu a{
     display: inline-block;
@@ -140,6 +144,9 @@ a {
     /* background-color:yellow; */
     padding: 8px 0;
     margin-right: 1em;
+}
+.sub-menu a:hover{
+    color: tomato;
 }
 .sub-menu a::before{
     content: '\f192';
@@ -159,8 +166,8 @@ a {
 .sub-menu4, .sub-menu5, .sub-menu6{
     right: 0;
 }
-.sub-menu1{
-    display:block;
+/* .sub-menu1{
+    display:none;
 }
 .sub-menu2{
     display: none;
@@ -176,7 +183,7 @@ a {
 }
 .sub-menu6{
     display: none;
-}
+} */
 /* 비쥬얼 */
 @keyframes textAni{
     0%{
@@ -551,17 +558,25 @@ a {
 } */
 /* 공지사항 및 자료실 */
 .board {
-    background-color: yellow;
+
     margin-top: 20px;
     position: relative;
-    min-height: 180px;
+    padding-top: 45px;
 }
 .notice-heading, .pds-heading {
-    background-color: pink;
-    float: left;
+
     margin: 0;
     font-size: 1.4rem;
     font-weight: 400; /*h2를 썼기때문에 쓰는 3가지 코드*/
+    position: absolute;
+    top:0;
+
+}
+.notice-heading{
+    left: 0;
+}
+.pds-heading {
+    left: 74px;
 }
 .tab {
     color: #666;
@@ -583,17 +598,12 @@ a {
     display: block;
 }
 .notice-list, .pds-list{
-    background-color: silver;
     list-style: none;
     margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 45px;
-    left: 0;
-    width: 100%;
+    padding-left: 0;
+    min-height: 130px;
 }
 .notice-list li, .pds-list li{
-    background-color: orange;
     margin-bottom: 10px;
 }
 .notice-list li::after, .pds-list li::after {
@@ -608,7 +618,6 @@ a {
     margin-right: .2em;
 }
 .notice-list a, .pds-list a{
-    background-color: skyblue;
     float: left; /*블록박스처럼 됨*/
     width: 300px;
     text-overflow: ellipsis;
@@ -616,7 +625,6 @@ a {
     white-space: nowrap;
 }
 .notice-list time, .pds-list time{
-    background-color: violet;
     float: right;
 }
 .notice-more, .pds-more {

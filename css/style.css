@@ -94,7 +94,6 @@ a {
     content:"";
     display: block;
     clear: both;
-
 }
 .menu-item{
     float: left;
@@ -469,24 +468,46 @@ a {
    padding: 0 10px;
 }
 /* 공지사항 및 자료실 */
-.board {
+/* .board {
     margin: 0;
     padding: 0;
     position: relative;
+    
 }
 .tab {
     color: orangered;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border: 1px solid orangered;
     padding: 5px 10px; 
     border-radius: 5px 5px 0 0; 
-    border-bottom: #fff;  
+    border-bottom: #fff;     
 }
-.notice-list, .pds-list {
+.notice-heading {
+    float: left;  
+}
+.pds-heading {
+    float: left; 
+}
+.pds-heading .tab {
+    background: #ccc linear-gradient(180deg,#ccc,#eee);
+    border: 1px solid #aaa;
+    color: gray;
+}
+.tab-act.
+.notice-list {
     list-style: none;
     padding: 0;
-    
+    position: absolute;
+    top: 50px;
+    background-color: #fff;
+}
+.pds-list {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    display: none;
 }
 .notice-list a::before {
     content: '\f192';
@@ -494,12 +515,32 @@ a {
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 10px;
-    
+}
+.notice-list a {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.pds-list a {
+    display: inline-block;
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .notice-more.icon-plus, .pds-more.icon-plus{
     position: absolute;
-    top: 0;
+    top: 20px;
     right: 0;
+}
+.notice-more.icon-plus::before {
+    color: green;
+}
+.pds-more.icon-plus::before {
+    color: green;
 }
 .pds-list a::before {
     content: '\f192';
@@ -507,7 +548,85 @@ a {
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 10px;
-    
+} */
+/* 공지사항 및 자료실 */
+.board {
+    background-color: yellow;
+    margin-top: 20px;
+    position: relative;
+    min-height: 180px;
+}
+.notice-heading, .pds-heading {
+    background-color: pink;
+    float: left;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 400; /*h2를 썼기때문에 쓰는 3가지 코드*/
+}
+.tab {
+    color: #666;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    display: block;
+    background: #ccc linear-gradient(150deg, #ccc, #eee);
+}
+.tab-act .tab{
+    color: #db5629;
+    border-color: #db5629 #db5629 #fff #db5629;
+    background: #fff;
+}
+.notice-list, .pds-list, .notice-more, .pds-more {
+    display: none;
+}
+.tab-act .notice-list, .tab-act .pds-list, .tab-act .notice-more, .tab-act .pds-more {
+    display: block;
+}
+.notice-list, .pds-list{
+    background-color: silver;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+}
+.notice-list li, .pds-list li{
+    background-color: orange;
+    margin-bottom: 10px;
+}
+.notice-list li::after, .pds-list li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.notice-list a::before, .pds-list a::before  {
+    content: '\f192';
+    font-family: 'fontello';
+    display: inline-block;
+    margin-right: .2em;
+}
+.notice-list a, .pds-list a{
+    background-color: skyblue;
+    float: left; /*블록박스처럼 됨*/
+    width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.notice-list time, .pds-list time{
+    background-color: violet;
+    float: right;
+}
+.notice-more, .pds-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;/*왜 굳이?*/
+    padding: 8px;
+}
+.icon-plus::before {
+    color:hsla(110, 70%, 50%, 1);
 }
 /* 슬로건 */
 .slogan{

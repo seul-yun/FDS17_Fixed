@@ -550,7 +550,7 @@ a {
 .notice-more, .pds-more {
     position: absolute;
     top: -8px;
-    right: -8px;/*왜 굳이?*/
+    right: -8px;
     padding: 8px;
 }
 .icon-plus::before {
@@ -615,11 +615,11 @@ a {
     padding: 10px;
     background: #ccc linear-gradient(180deg, #ccc, #eee);
 }
-.event-heading, .related-heading {
+.event-heading, .related-heading,.favorite-heading {
     font-size: 1.6rem;
     margin: 0;
 }
-.event-heading span, .related-heading span{
+.event-heading span, .related-heading span, .favorite-heading span{
     color: #db5629;
     /* margin: 0; */
 }
@@ -686,8 +686,109 @@ a {
     line-height: 21px;
     display: block;
     text-indent: 1em;
+    flex-grow: 1;
 }
+/* 인기 사이트 */
+.group3 .gradient-box:nth-child(2) {
+    margin-top: 20px;
+}
+.favorite {
+    position: relative;
+}
+.favorite-list {
+   margin: 10px 0 0 0;
+   list-style: none;
+   padding-left: 0;
+}
+/* .favorite-list li{
+    counter-increment: number;
+    margin-top: 5px;
+    background-color: violet;
+    position: relative;
+} */
+.favorite-list li{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    counter-increment: number;
+    margin-top: 5px;
+}
+.favorite-list li::before{
+    content: counter(number);
+    /* display: inline-block; */
+    padding: 2px 5px;
+    color: #fff;
+    background-color: #aaa;
+    border-radius: 2px;
+    margin-right: 5px;
+    font-size: 1.3rem;
+}
+.favorite-list a{
+    /* display: inline-block; */
+    flex-grow: 1;
+}
+.up, .down, .stop{
+    /* display: inline-block; */
+    background-image: url(./images/rank.png);
+    background-repeat: no-repeat;
+    font-style: normal;
+    width: 9px;
+    height: 11px;
+    padding-top: 11px;
+    overflow: hidden;
+    /* position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -5px; ?? */
+}
+.stop {
+    background-position: 0 50%;
+}
+.down{
+    background-position: 0 100%;
+}
+.up{
+    background-position: 0 0;
+}
+.favorite-more {
+    position: absolute;
+    padding: 8px;
+    top: -8px;
+    right: -8px;
+}
+/* .favorite-list em{
+    background-color: #ccc;
+    background-image: url(./images/rank.png);
+    background-repeat: no-repeat;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    vertical-align: top;
+    position: relative;
+}
+.favorite-list .up{
+    position: absolute;
+    overflow: hidden;
+    width: 9px;
+    height: 11px;
 
+}
+.favorite-list .down{
+    position: absolute;
+    overflow: hidden;
+    width: 9px;
+    height: 11px;
+}
+.favorite-list .stop{
+    position: absolute;
+    overflow: hidden;
+    width: 9px;
+    height: 11px;
+}
+.favorite-list a{
+    display: inline-block;
+    width: 150px; */
+}
 /* 슬로건 */
 .slogan{
     background-color: orange;

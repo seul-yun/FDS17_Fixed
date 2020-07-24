@@ -474,88 +474,7 @@ a {
    height: 24px;
    padding: 0 10px;
 }
-/* 공지사항 및 자료실 */
-/* .board {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    
-}
-.tab {
-    color: orangered;
-    font-weight: 400;
-    font-size: 1.3rem;
-    border: 1px solid orangered;
-    padding: 5px 10px; 
-    border-radius: 5px 5px 0 0; 
-    border-bottom: #fff;     
-}
-.notice-heading {
-    float: left;  
-}
-.pds-heading {
-    float: left; 
-}
-.pds-heading .tab {
-    background: #ccc linear-gradient(180deg,#ccc,#eee);
-    border: 1px solid #aaa;
-    color: gray;
-}
-.tab-act.
-.notice-list {
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    top: 50px;
-    background-color: #fff;
-}
-.pds-list {
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    top: 50px;
-    display: none;
-}
-.notice-list a::before {
-    content: '\f192';
-    font-family: 'fontello';
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-.notice-list a {
-    display: inline-block;
-    width: 300px;
-    vertical-align: top;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.pds-list a {
-    display: inline-block;
-    width: 300px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.notice-more.icon-plus, .pds-more.icon-plus{
-    position: absolute;
-    top: 20px;
-    right: 0;
-}
-.notice-more.icon-plus::before {
-    color: green;
-}
-.pds-more.icon-plus::before {
-    color: green;
-}
-.pds-list a::before {
-    content: '\f192';
-    font-family: 'fontello';
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
-} */
+
 /* 공지사항 및 자료실 */
 .board {
 
@@ -687,6 +606,68 @@ a {
     left: 0;
     text-align: center;
     box-shadow: ;
+}
+/* 신규 이벤트 및 관련 사이트*/
+/* 신규 이벤트 */
+.gradient-box {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    background: #ccc linear-gradient(180deg, #ccc, #eee);
+}
+.event {
+    border-bottom: 1px solid #aaa;
+    position: relative;
+}
+.event-heading {
+    font-size: 1.6rem;
+    margin: 0;
+}
+.event-heading span{
+    color: #db5629;
+    /* margin: 0; */
+}
+.event-thumbnail, .event-brief{
+    margin: 10px 0;
+}
+.event-thumbnail img{
+    border: 1px solid #aaa;
+    box-shadow: 5px 5px 0 0 #999;
+}
+.event-brief em {
+    font-style: normal;
+}
+.btn-wrap {
+    height: 18px;
+}
+/* .btn-prev, .btn-next{
+    background: #ccc url(./images/back_forward.png) no-repeat;
+    background-image: url(./images/back_forward.png);
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 100%;
+    border: 0;
+    overflow: hidden;
+    padding: 18px 0 0 0;
+    cursor: pointer;   
+} */
+.btn-next {
+    background-position: -35px 0;
+}
+.btn-wrap{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btn-prev, .btn-next {
+    background-color: #ccc;
+    background-image: url(./images/back_forward.png);
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 18px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
 }
 
 /* 슬로건 */

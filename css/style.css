@@ -25,6 +25,8 @@ body{
     overflow: hidden;
     margin: -1px;
     clip-path: polygon(0 0, 0 0, 0 0);
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
 }
 /* 링크 스타일 */
 a {
@@ -668,6 +670,7 @@ a {
     border: 0;
     padding: 0;
     cursor: pointer;
+    vertical-align: top;
 }
 
 /* 슬로건 */

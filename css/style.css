@@ -825,13 +825,13 @@ a {
 }
 .slogan-brief q::before{
     font-size: 3rem;
-    position:relative ; /*본래영역 차지*/
-    top: 10px;
+    /* position:relative ; 본래영역 차지
+    top: 10px; */
     margin-right: 5px;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 .slogan-brief q::after{
-    content: "";/*자동으로 생기는 뒤쪽 따옴표  안쓰기*/
+    content: "";/*자동으로 생기는 뒤쪽 따옴표 안쓰기*/
 }
 /* 푸터 */
 .footer-bg{
